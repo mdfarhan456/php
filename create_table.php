@@ -20,7 +20,13 @@ else
 
     // creating table.
 
-$sql = "CREATE TABLE `data` (`Sno.` INT(11) NOT NULL , `Name` VARCHAR(11) NOT NULL , `Role` VARCHAR(11) NOT NULL , `DOJ` DATETIME NOT NULL , PRIMARY KEY (`Sno.`))";
+$sql = "CREATE TABLE `data` (
+   Sno INT(11) NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(50) NOT NULL,
+    Role VARCHAR(50) NOT NULL,
+    DOJ DATETIME NOT NULL,
+    PRIMARY KEY (Sno)
+)";
 $result = mysqli_query($con ,$sql);
 
 //checking

@@ -17,7 +17,7 @@ else
     {
         echo "connected successfully! <br>";
     }
-    $sql = "INSERT INTO `data` (`Sno.`, `Name`, `Role`, `DOJ`) VALUES ('1', 'farhan', 'admin', '2026-01-02 09:22:00.000000')";
+    $sql = "INSERT INTO `data` (`Sno.`, `Name`, `Role`, `DOJ`) VALUES ('5', 'sahil', 'teacher', '2026-01-02 09:22:00.000000')";
     $result = mysqli_query($con ,$sql);
 
 //checking
