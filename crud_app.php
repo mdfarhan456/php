@@ -44,6 +44,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     <link rel="stylesheet" href="//cdn.datatables.net/2.3.6/css/dataTables.dataTables.min.css">  
 </head>
   <body>
+
+  <!-- edit modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+ Edit Modal
+</button> -->
+
+<!-- edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">iNote</a>
@@ -143,5 +168,20 @@ if($flag)
       $('#myTable').DataTable();
   });
 </script>
+<script>
+  let edits = document.getElementsByClassName('edit');
+
+  Array.from(edits).forEach((element) => {
+   element.addEventListener("click", (e) => {
+        console.log("edit ");
+        tr = e.target.parentNode.parentNode;
+        title = tr.getElementsByTagName("td")[1].innerText;
+        description = tr.getElementsByTagName("td")[2].innerText;
+        console.log(title, description);
+    });
+  });
+</script>
+
+
   </body>
 </html>
