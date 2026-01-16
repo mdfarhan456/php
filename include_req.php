@@ -4,7 +4,7 @@
 
 require '_dbConnect.php';
 
-require 'slectforreqinclude.php';
+// require 'slectforreqinclude.php';
 require 'abs.php';
 
 ?>
